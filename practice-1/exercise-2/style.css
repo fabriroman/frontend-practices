@@ -1,0 +1,41 @@
+/* First item (and only first item) text color is red */
+.silly-list li:first-child {
+    color: red;
+}
+
+/* Every item but the last has 13px padding */
+.silly-list li:not(:last-child) {
+    padding: 13px;
+}
+
+/* Even items in the list have a blue background color */
+.silly-list li:nth-child(even) {
+    background-color: blue;
+}
+
+/* Every third item has a square bullet point, not a round disc bullet point */
+.silly-list li:nth-child(3n) {
+    list-style-type: square;
+}
+
+/* The fifth list item text is orange */
+.silly-list li:nth-child(5) {
+    color: orange;
+}
+
+/* >When you hover on this list item, the next list item directly below it will have its text color 
+and/or background color turn a new color of your choice */
+.silly-list li:hover + li {
+    color: red;
+}
+
+/* EXTRA CHALLENGE: At 8 list items and up (and only then), all
+list items change to have green color, white text, 10px padding all
+around, and a 1px solid white border! If there are 7 or fewer items, those
+styles don't apply. */
+.silly-list:has(li:nth-child(8)) li {
+    color: white;
+    background-color: green;
+    padding: 10px;
+    border: 1px solid white;
+}
