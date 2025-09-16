@@ -1,0 +1,151 @@
+/* Tree */
+
+.tree-container {
+    width: 600px;
+    height: 600px;
+    background-color: #0d1429;
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.tree-foliage-top {
+    width: 0;
+    height: 0;
+    border-left: 80px solid transparent;
+    border-right: 80px solid transparent;
+    border-bottom: 80px solid green;
+    margin-bottom: -50px;
+}
+
+.tree-foliage-middle {
+    width: 0;
+    height: 0;
+    border-left: 100px solid transparent;
+    border-right: 100px solid transparent;
+    border-bottom: 100px solid green;
+    margin-bottom: -70px;
+}
+
+.tree-foliage-bottom {
+    width: 0;
+    height: 0;
+    border-left: 140px solid transparent;
+    border-right: 140px solid transparent;
+    border-bottom: 140px solid green;
+    margin-bottom: 0;
+}
+
+.tree-trunk {
+    width: 60px;
+    height: 100px;
+    background-color: #a16207;
+    margin-top: 0;
+}
+
+
+/* Rocket */
+
+.rocket-container {
+    width: 600px;
+    height: 600px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;    
+}
+
+
+.rocket-main {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.fins-container {
+    width: 100px;
+    height: 335px;
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+}
+
+
+.fin-left {
+    width: 0;
+    height: 0;
+    border-left: 50px solid transparent;
+    border-right: 0 solid transparent;
+    border-bottom: 50px solid blue;
+    align-self: end;
+}
+
+.fin-right {
+    width: 0;
+    height: 0;
+    border-left: 0 solid transparent;
+    border-right: 50px solid transparent;
+    border-bottom: 50px solid blue;
+}
+
+.nose-cone {
+    width: 0;
+    height: 0;
+    border-left: 42.5px solid transparent;
+    border-right: 42.5px solid transparent;
+    border-bottom: 85px solid blue;
+}
+
+.rocket-body {
+    width: 85px;
+    height: 250px;
+    background-color: red;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: start;
+}
+
+.window {
+    width: 35px;
+    height: 35px;
+    background-color: yellow;
+    border-radius: 50%;
+}
+
+.window-1 {
+    margin-top: 40px;
+    margin-bottom: 20px;
+}
+
+.engines {
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+}
+
+.engine-left {
+    width: 0;
+    height: 0;
+    border-top: 45px solid yellow;
+    border-right: 25px solid transparent;
+    border-left: 25px solid transparent;
+    border-bottom: 0 solid transparent;
+}
+
+.engine-right {
+    width: 0;
+    height: 0;
+    border-top: 45px solid yellow;
+    border-right: 25px solid transparent;
+    border-left: 25px solid transparent;
+    border-bottom: 0 solid transparent;
+}
+
+
+
+
