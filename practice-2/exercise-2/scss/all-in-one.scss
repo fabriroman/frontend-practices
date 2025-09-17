@@ -1,0 +1,45 @@
+$color-primary: #333;
+$color-secondary: #777;
+$color-border: #ccc;
+
+$spacing: 15px;
+$spacing-small: 8px;
+
+$avatar-size: 80px;
+$card-width: 200px;
+
+@mixin button-style {
+  background-color: $color-primary;
+  color: white;
+  padding: $spacing-small 12px;
+  border: none;
+  cursor: pointer;
+}
+
+.card {
+  border: 1px solid $color-border;
+  padding: $spacing;
+  margin: 10px;
+  text-align: center;
+  width: $card-width;
+  display: inline-block;
+
+  .avatar {
+    width: $avatar-size;
+    border-radius: 50%;
+  }
+
+  .name {
+    font-size: 1.2em;
+    margin: 10px 0;
+  }
+
+  .role {
+    color: $color-secondary;
+    font-style: italic;
+  }
+
+  .btn {
+    @include button-style;
+  }
+}

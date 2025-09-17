@@ -1,0 +1,30 @@
+@use 'variables' as *;
+@use 'mixins' as *;
+
+.card {
+  border: 1px solid $color-border;
+  padding: $spacing;
+  margin: 10px;
+  text-align: center;
+  width: $card-width;
+  display: inline-block;
+
+  .avatar {
+    width: $avatar-size;
+    border-radius: 50%;
+  }
+
+  .name {
+    font-size: 1.2em;
+    margin: 10px 0;
+  }
+
+  .role {
+    color: $color-secondary;
+    font-style: italic;
+  }
+
+  .btn {
+    @include button-style;
+  }
+}
