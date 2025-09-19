@@ -38,6 +38,16 @@
     margin: 0;
 }
 
+.weather-card__temperature-value {
+    font-size: 2rem;
+}
+
+.weather-card__temperature-unit {
+    font-size: 1rem;
+    vertical-align: super;
+    color: #333;
+}
+
 .weather-card__metric {
     display: flex; 
     gap: 5px;
@@ -46,20 +56,24 @@
 .weather-card__city {
     margin: 0;
     text-align: right;
+    color: #333;
 }
 
 .weather-card__datetime {
     margin: 0;
     text-align: right;
+    color: #666;
 }
 
 .weather-card__description {
     margin: 0;
     text-align: right;
+    color: #666;
 }
 
 .weather-card__metric p {
     margin: 0;
+    color: #666;
 }
 
 .loading-spinner {
