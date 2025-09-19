@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercise 1</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="city-selector">
+        <label for="citySelect" class="city-selector__label">Select a city:</label>
+        <select id="citySelect" class="city-selector__select">
+            <option value="La Paz" class="city-selector__option">La Paz</option>
+            <option value="Potosi" class="city-selector__option">Potosi</option>
+            <option value="Cochabamba" class="city-selector__option">Cochabamba</option>
+            <option value="Sucre" class="city-selector__option">Sucre</option>
+        </select>
+    </div>
+
+    <div id="loadingSpinner" class="loading-spinner" style="display: none;">
+        <div class="spinner"></div>
+        <p>Loading weather data...</p>
+    </div>
+
+    <div class="weather-card-container">
+        <main class="weather-card">
+            <section class="weather-card__primary">
+                <div class="weather-card__icon-temperature-container">
+                    <figure class="weather-card__icon">
+                        <img id="icon" width="65" height="65">
+                    </figure>
+        
+                    <p class="weather-card__temperature">
+                        <span id="tempValue" class="weather-card__temperature-value">--</span>
+                        <span class="weather-card__temperature-unit">°C</span>
+                    </p>
+                </div>
+                
+                
+                <div class="weather-card__metrics">
+                    <div class="weather-card__metric">
+                        <p class="weather-card__metric-label">Precipitation:</p>
+                        <p id="precip" class="weather-card__metric-value">--</p>
+                    </div>
+                    <div class="weather-card__metric">
+                        <p class="weather-card__metric-label">Humidity:</p>
+                        <p id="humidity" class="weather-card__metric-value">--</p>
+                    </div>
+                    <div class="weather-card__metric">
+                        <p class="weather-card__metric-label">Wind:</p>
+                        <p id="wind" class="weather-card__metric-value">--</p>
+                    </div>
+                </div>
+            </section>
+
+            <section class="weather-card__context">
+                <h1 id="city" class="weather-card__city">--</h1>
+                <p id="time" class="weather-card__datetime">--</p>
+                <p id="desc" class="weather-card__description">--</p>
+                </section>
+        </main>
+    </div>
+
+    
+    <script src="script.js"></script>
+</body>
+</html>
