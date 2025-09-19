@@ -1,0 +1,85 @@
+* {
+    box-sizing: border-box;
+}
+
+.city-selector {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.weather-card-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.weather-card {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 40%;
+}
+
+.weather-card__icon-temperature-container {
+    display: flex;
+    flex-direction: row;
+    height: 65px;
+}
+
+.weather-card__icon {
+    margin: 0;
+}
+
+.weather-card__temperature {
+    align-self: center;
+    margin: 0;
+}
+
+.weather-card__metric {
+    display: flex; 
+    gap: 5px;
+}
+
+.weather-card__city {
+    margin: 0;
+    text-align: right;
+}
+
+.weather-card__datetime {
+    margin: 0;
+    text-align: right;
+}
+
+.weather-card__description {
+    margin: 0;
+    text-align: right;
+}
+
+.weather-card__metric p {
+    margin: 0;
+}
+
+.loading-spinner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 20px 0;
+}
+
+.spinner {
+    width: 40px;
+    height: 40px;
+    border: 4px solid white;
+    border-top: 4px solid #3498db;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
