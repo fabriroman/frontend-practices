@@ -1,0 +1,33 @@
+$bg: #0f172a;
+$accent: #60a5fa;
+$text: #e5e7eb;
+
+* { 
+  box-sizing: border-box; 
+}
+
+body {
+  margin: 0;
+  background: $bg;
+  color: $text;
+
+  .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    .number {
+      font-size: 100px;
+    }
+
+    .start-button {
+      padding: 12px 20px;
+      border: 0;
+      border-radius: 12px;
+      background: $accent;
+      color: #0b1220;
+      cursor: pointer;
+    }
+  }
+}
