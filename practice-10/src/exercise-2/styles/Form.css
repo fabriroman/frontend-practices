@@ -1,0 +1,66 @@
+.social {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.social__form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.social__field-group {
+  display: flex;
+  gap: 10px;
+}
+
+.social__select {
+  flex: 1;
+  padding: 8px;
+}
+
+.social__input {
+  flex: 2;
+  padding: 8px;
+}
+
+.social__remove {
+  padding: 8px 12px;
+  background-color: #dc3545;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+.social__remove:disabled {
+  background-color: #6c757d;
+  cursor: not-allowed;
+}
+
+.social__error {
+  color: #dc3545;
+  font-size: 15px;
+}
+
+.social__actions {
+  display: flex;
+  gap: 10px;
+  justify-content: flex-start;
+}
+
+.social__add {
+  padding: 10px 20px;
+  background-color: #28a745;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+.social__submit {
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  cursor: pointer;
+}

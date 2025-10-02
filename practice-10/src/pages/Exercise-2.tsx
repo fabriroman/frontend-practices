@@ -1,4 +1,5 @@
 import { useFieldArray, useForm } from "react-hook-form";
+import "../exercise-2/styles/Form.css";
 
 const socialMediaPlatforms = [
   { value: "twitter", label: "Twitter" },
@@ -53,13 +54,14 @@ export const Exercise2 = () => {
   };
 
   return (
-    <div>
-      <h1>Social Media Links</h1>
+    <div className="social">
+      <h1 className="social__title">Social Media Links</h1>
 
-      <form onSubmit={handleSubmit(onSubmit)}>
+      <form onSubmit={handleSubmit(onSubmit)} className="social__form">
         {fields.map((field, index) => (
-          <div key={field.id}>
+          <div key={field.id} className="social__field-group">
             <select
+              className="social__select"
               defaultValue={field.platform}
               {...register(`socialLinks.${index}.platform`, {
                 required: "Please select a platform",
@@ -73,11 +75,14 @@ export const Exercise2 = () => {
               ))}
             </select>
             {errors.socialLinks?.[index]?.platform && (
-              <p>{errors.socialLinks[index]?.platform?.message}</p>
+              <div className="social__error">
+                {errors.socialLinks[index]?.platform?.message}
+              </div>
             )}
 
             <input
               type="text"
+              className="social__input"
               placeholder="https://..."
               defaultValue={field.url}
               {...register(`socialLinks.${index}.url`, {
@@ -86,11 +91,14 @@ export const Exercise2 = () => {
               })}
             />
             {errors.socialLinks?.[index]?.url && (
-              <p>{errors.socialLinks[index]?.url?.message}</p>
+              <div className="social__error">
+                {errors.socialLinks[index]?.url?.message}
+              </div>
             )}
 
             <button
               type="button"
+              className="social__remove"
               onClick={() => remove(index)}
               disabled={fields.length === 1}
             >
@@ -99,16 +107,21 @@ export const Exercise2 = () => {
           </div>
         ))}
 
-        {fields.length < 5 && (
-          <button
-            type="button"
-            onClick={() => append({ platform: "", url: "" })}
-          >
-            Add Social Media
-          </button>
-        )}
+        <div className="social__actions">
+          {fields.length < 5 && (
+            <button
+              type="button"
+              className="social__add"
+              onClick={() => append({ platform: "", url: "" })}
+            >
+              Add Social Media
+            </button>
+          )}
 
-        <button type="submit">Save</button>
+          <button type="submit" className="social__submit">
+            Save
+          </button>
+        </div>
       </form>
     </div>
   );
