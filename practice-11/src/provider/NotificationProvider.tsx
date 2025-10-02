@@ -3,28 +3,54 @@ import {
   type NotificationContextValue,
   type NotificationData,
 } from "../context/NotificationContext";
-import { useState, useEffect, type ReactNode } from "react";
+import { useState, useEffect, useRef, type ReactNode } from "react";
 
 export const NotificationProvider = ({ children }: { children: ReactNode }) => {
   const [notification, setNotification] = useState<NotificationData | null>(
     null
   );
+  const [queue, setQueue] = useState<NotificationData[]>([]);
+  const timeoutRef = useRef<number | null>(null);
 
-  const showNotification = (notification: NotificationData) => {
-    setNotification(notification);
+  const showNotification = (newNotification: NotificationData) => {
+    if (!notification) {
+      setNotification(newNotification);
+    } else {
+      setQueue((prev) => [...prev, newNotification]);
+    }
   };
 
   const clearNotifications = () => {
+    if (timeoutRef.current) {
+      clearTimeout(timeoutRef.current);
+      timeoutRef.current = null;
+    }
     setNotification(null);
   };
 
+  const processQueue = () => {
+    if (queue.length > 0) {
+      const nextNotification = queue[0];
+      setQueue((prev) => prev.slice(1));
+      setNotification(nextNotification);
+    }
+  };
+
   useEffect(() => {
-    if (!notification) return;
-    const timeoutId = setTimeout(() => {
+    if (!notification && queue.length > 0) {
+      processQueue();
+    }
+    timeoutRef.current = setTimeout(() => {
       setNotification(null);
     }, 3000);
-    return () => clearTimeout(timeoutId);
-  }, [notification]);
+
+    return () => {
+      if (timeoutRef.current) {
+        clearTimeout(timeoutRef.current);
+        timeoutRef.current = null;
+      }
+    };
+  }, [notification, queue]);
 
   const contextValue: NotificationContextValue = {
     notification: notification,
