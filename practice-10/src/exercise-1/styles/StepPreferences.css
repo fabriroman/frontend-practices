@@ -1,0 +1,39 @@
+.form-step__radio-group {
+  display: flex;
+  gap: 1rem;
+  margin-top: 0.5rem;
+}
+
+.form-step__checkbox-group {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-top: 0.5rem;
+}
+
+.form-step__radio-option {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.form-step__radio {
+  margin: 0;
+}
+
+.form-step__radio-label {
+  cursor: pointer;
+}
+
+.form-step__checkbox {
+  margin: 0;
+}
+
+.form-step__checkbox-label {
+  cursor: pointer;
+}
+
+.form-step__select {
+  width: 100%;
+  padding: 0.75rem;
+  border: 2px solid #e0e0e0;
+}

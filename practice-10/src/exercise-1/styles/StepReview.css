@@ -1,0 +1,11 @@
+.form-step__review-section {
+  margin-bottom: 2rem;
+  padding: 1rem;
+  background: #f5f5f5;
+}
+
+.form-step__review-field {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 0.5rem;
+}
