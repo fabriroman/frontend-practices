@@ -12,6 +12,16 @@
   align-items: center;
   justify-content: space-between;
   gap: 12px;
+  animation: slideInFade 0.3s ease-out;
+}
+
+@keyframes slideInFade {
+  from {
+    transform: translateX(-50%) translateY(-20px);
+  }
+  to {
+    transform: translateX(-50%) translateY(0);
+  }
 }
 
 .notification__close {
