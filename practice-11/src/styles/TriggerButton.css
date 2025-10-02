@@ -1,0 +1,14 @@
+.button {
+  padding: 8px 12px;
+  border-radius: 6px;
+  cursor: pointer;
+  background: white;
+}
+
+.button--navbar {
+  padding: 6px 10px;
+}
+
+.button--content {
+  margin-bottom: 8px;
+}
