@@ -29,10 +29,6 @@ export const ModalApp = () => {
           Open Modal
         </button>
 
-        <div className="modal-app__loading">
-          <div className="modal-app__spinner"></div>
-          <p>Loading modal...</p>
-        </div>
         {isModalOpen && (
           <Suspense
             fallback={
