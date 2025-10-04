@@ -1,0 +1,10 @@
+.text-metrics {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.text-metrics__metric {
+  padding: 1rem;
+  border: 1px solid #dee2e6;
+}
