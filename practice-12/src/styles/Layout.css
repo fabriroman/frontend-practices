@@ -1,0 +1,12 @@
+/* Block: layout */
+.layout {
+  min-height: 100vh;
+  background: #f8f9fa;
+}
+
+/* Element: layout__main */
+.layout__main {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
