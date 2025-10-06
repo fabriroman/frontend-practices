@@ -1,0 +1,30 @@
+.todo-list {
+  background: #f8f9fa;
+  padding: 1rem;
+}
+
+.todo-list__header {
+  margin-bottom: 1rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid #dee2e6;
+}
+
+.todo-list__title {
+  margin: 0;
+}
+
+
+.todo-list__items {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.todo-list__empty {
+  text-align: center;
+  padding: 2rem;
+}
+
+.todo-list__empty-text {
+  margin: 0;
+}
